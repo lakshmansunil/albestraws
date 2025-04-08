@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fba932e4.css",
+    "main.js": "/static/js/main.e97629d2.js",
+    "static/media/competitive-pricing.mp4": "/static/media/competitive-pricing.e2ded70d868771220089.mp4",
+    "static/media/tailored-solutions.mp4": "/static/media/tailored-solutions.862b5a53d4828f76a39a.mp4",
+    "static/media/compliance.mp4": "/static/media/compliance.0bfee96d3b80f50d3444.mp4",
+    "static/media/fast-delivery.mp4": "/static/media/fast-delivery.9bd84c1f45b5b3e45de7.mp4",
+    "static/media/expert-support.mp4": "/static/media/expert-support.c96d6f0c4ff29f07eb78.mp4",
+    "static/media/fast-staffing.mp4": "/static/media/fast-staffing.10ba5b61a8f3073b33d9.mp4",
+    "static/media/security.mp4": "/static/media/security.c87354a0247ea5dd9de5.mp4",
+    "static/media/quality-candidates.mp4": "/static/media/quality-candidates.1bbc8914885e567ff1e8.mp4",
+    "static/media/cost-savings.mp4": "/static/media/cost-savings.ae6145d2fb1bf7b664fd.mp4",
+    "static/media/wide-selection.mp4": "/static/media/wide-selection.1dfe4db671ed1ad20c75.mp4",
+    "static/media/scalable.mp4": "/static/media/scalable.3642daf9dc58528ab99a.mp4",
+    "static/media/custom.mp4": "/static/media/custom.94f5bb724d0ce2fc7e45.mp4",
+    "static/media/certification.mp4": "/static/media/certification.7f2eec6875402f0c05a3.mp4",
+    "static/media/measure.mp4": "/static/media/measure.0318f8e813e988e9beeb.mp4",
+    "static/media/user.mp4": "/static/media/user.75a7cb40457fc2439e48.mp4",
+    "static/media/cost.mp4": "/static/media/cost.76c6da4fa60dc410bf7d.mp4",
+    "static/media/experience.mp4": "/static/media/experience.4ff578df5d8bec83b8ff.mp4",
+    "static/media/delivery.mp4": "/static/media/delivery.c7f949cf300c5c6b0d0f.mp4",
+    "static/media/expert.mp4": "/static/media/expert.3bf0ac726eb03f4bdb6a.mp4",
+    "static/media/agile.mp4": "/static/media/agile.45b96b63147fbb613225.mp4",
+    "static/media/logo.png": "/static/media/logo.30c5712ba60bcc185ad2.png",
+    "index.html": "/index.html",
+    "main.fba932e4.css.map": "/static/css/main.fba932e4.css.map",
+    "main.e97629d2.js.map": "/static/js/main.e97629d2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fba932e4.css",
+    "static/js/main.e97629d2.js"
+  ]
+}
