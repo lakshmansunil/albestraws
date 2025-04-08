@@ -29,7 +29,7 @@ const values = [
     description: "Different perspectives drive our creativity, innovation, and meaningful connections.",
   },
   {
-    title: "Join the St. Fox Tribe",
+    title: "Join the Albestraws",
     icon: <FaHandshake className="text-orange-500 text-4xl" />,
     description: "If you thrive in a passionate, diverse, and values-driven environment, we’d love to have you onboard.",
   },
