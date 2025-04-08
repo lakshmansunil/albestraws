@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  scroll-behavior:smooth ;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#particleJs canvas {
+  position: absolute !important;
+  width: 100px !important;
+  height: 50px !important;
+  z-index: -10;
+}
+
+
+.truncate-multiline {
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1; /* Number of lines to show before truncating */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideleft {
+  from {
+    transform: translatex(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.slide-up {
+  animation: slideUp 1s ease-in-out forwards;
+}
+.slide-up:hover{
+  scale: 1.05;
+}
+
+.slide-left {
+  animation: slideleft 1s ease-in-out forwards;
+}
+.zoom-in:hover {
+  animation: zoomIn 0.5s ease-in-out forwards;
+}
+
+
+/*insights**********************************************************/
+
+/* Combined Animation */
+.combined-btn {
+  display: inline-block;
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 0.5rem;
+  box-shadow: rgba(255, 255, 255, 0.4) 10px 10px, rgba(255, 255, 255, 0.3) 20px 20px, rgba(255, 255, 255, 0.2) 30px 30px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all  ease-in-out;
+}
+
+.combined-btn:before,
+.combined-btn:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  display: block;
+  transition: all  0.7s ease-in-out;
+  z-index: -1;
+}
+
+.combined-btn:before {
+  top: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.combined-btn:after {
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #f5fdff;
+}
+
+.combined-btn:hover {
+  color: #000000;
+  border-color: rgb(238, 103, 238);
+  box-shadow: rgba(255, 255, 255, 0.4) 10px 10px, rgba(255, 255, 255, 0.3) 20px 20px, rgba(255, 255, 255, 0.2) 30px 30px;
+  translate: 0px -10px;
+  transition: all 0.5s ease-in-out ;
+}
+
+.combined-btn:hover:before {
+  top: -35%;
+  background-color: #f5fdff;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  transition: all 0.5s ease-in-out ;
+}
+
+.combined-btn:hover:after {
+  top: -45%;
+  background-color: #f5fdff;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  transition: all 0.5s ease-in-out ;
+}
+
+#combined-btn{
+  transition: all 0.2s ease-in-out;
+}
+#combined-btn:hover{
+  translate: 0px -10px;
+  transition: all 0.2s  ease-in-out;
+}
+
+
+
+/* Trainng component********************************************/
+.training-card{
+  box-shadow: 10px 10px #1e1e1e67,20px 20px #2323234a ;
+}
+
+
+
+/*Chat BOt**************************/
+/* width */
+.chat-box::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+.chat-box::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.chat-box::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.chat-box::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
