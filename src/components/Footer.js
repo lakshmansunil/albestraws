@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { RiTwitterXFill } from "react-icons/ri";
+// import { RiTwitterXFill } from "react-icons/ri";
 import { BsInstagram } from "react-icons/bs";
+// import { BsFacebook } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoCallOutline } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";
@@ -30,29 +31,37 @@ const Footer = () => {
             </p>
             <div className="flex flex-row my-4 gap-6">
               <a
-                href="https://www.linkedin.com/company/gloom-dev-pvt-ltd"
+                href="https://www.linkedin.com/company/104100677/admin/dashboard/"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:-translate-y-1 hover:scale-125 transition-transform duration-300 text-xl"
               >
                 <FaLinkedinIn />
               </a>
-              <a
+              {/* <a
                 href="https://x.com/GloomDev"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:-translate-y-1 hover:scale-125 transition-transform duration-300 text-xl"
               >
                 <RiTwitterXFill />
-              </a>
+              </a> */}
               <a
-                href="https://www.instagram.com/gloom_dev/"
+                href="https://www.instagram.com/albestraws?igsh=MmVhOHFsc21nMXd5"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:-translate-y-1 hover:scale-125 transition-transform duration-300 text-xl"
               >
                 <BsInstagram />
               </a>
+              {/* <a
+                href="https://www.instagram.com/gloom_dev/"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:-translate-y-1 hover:scale-125 transition-transform duration-300 text-xl"
+              >
+                <BsFacebook />
+              </a> */}
             </div>
           </div>
 
@@ -98,10 +107,10 @@ const Footer = () => {
                 <IoCallOutline className="text-white text-xl" />
                 Phone:{" "}
                 <a
-                  href="tel:08043757155"
+                  href="tel:0804436670"
                   className="hover:text-gray-300 underline transition"
                 >
-                  080 4375 7155
+                  080-4436670
                 </a>
               </li>
               <li className="flex gap-3 items-center mt-2">
@@ -111,7 +120,7 @@ const Footer = () => {
                   href="mailto:info@gloomdev.in"
                   className="hover:text-gray-300 underline transition"
                 >
-                  krkraju@albestraws.com
+                  Info@albestraws.com
                 </a>
               </li>
               <li className="flex gap-3 items-start mt-2">
@@ -119,11 +128,10 @@ const Footer = () => {
                 <span>
                   Address:{" "}
                   <a
-                    href="#"
+                    href="https://www.google.com/maps?q=KIRAN+TOWER+Teachers+Colony+Koramangala+Bangalore"
                     className="hover:text-gray-300 underline transition"
                   >
-                    #461, 4th Floor, Sai Sobagu, Teacher's Colony, Outer Ring
-                    Road, beside Bluedart Office, Koramangala, Bangalore-560034
+                    #459, 2nd Floor, KIRAN TOWER, Teachers Colony, 1st Block Koramangala, Bangalore-560034, Karnataka, INDIA.
                   </a>
                 </span>
               </li>
