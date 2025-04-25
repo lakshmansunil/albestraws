@@ -5,11 +5,16 @@ import ParticlesComponent from "./components/ParticlesComponents";
 import Main from "./components/HomeComponents/Main";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/scrolltotop";
+// import ChatBot from "./components/chatbot";
+// import ServicesIntersection from "../src/components/HomeComponents/ServicesIntersection";
+import TechnologyHarness from "./components/HomeComponents/TechnologyHarness";
+import PartnersSection from "./components/HomeComponents/PartnersSection";
 import Careers from "./components/careers";
 import PageNotFound from "./404";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import AboutUs from "./components/AboutUs";
 import Expertise from "./Expertise";
+import Blog from "./Blog";
 import DataCenter from './DataCenter';
 import Service1 from "./components/services/Service1";  
 import Service2 from "./components/services/Service2";  
@@ -23,6 +28,10 @@ const HomePage = () => {
     <>
       <ParticlesComponent id="particleJs" />
       <Main />
+      <TechnologyHarness/>
+      {/* <ServicesIntersection/> */}
+      {/* <ChatBot/> */}
+      <PartnersSection/>
       <ServicesPage/>
     </>
   );
@@ -39,6 +48,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/expertise" element={<Expertise />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/data-center" element={<DataCenter />} />
