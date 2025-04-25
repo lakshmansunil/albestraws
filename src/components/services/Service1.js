@@ -69,177 +69,210 @@ const Service1 = () => {
   }, []);
 
   return (
-    <div className="py-16 bg-gray-50">
-      {/* Main Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center mb-16 px-6"
-      >
-        <h2 className="text-4xl font-extrabold text-gray-800 tracking-tight mb-4">
-          Empowering Businesses with the <span className="text-blue-600">Right Talent</span>
-        </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          We specialize in providing top-tier human resource solutions to businesses across various industries.
-        </p>
-      </motion.div>
-
-      {/* About Us Section */}
-      <div className="max-w-5xl mx-auto px-6 md:px-12 mb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="bg-white p-8 rounded-xl shadow-md text-center"
-        >
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">Who We Are</h3>
-          <p className="text-lg text-gray-600">
-            Whether you need temporary staff, permanent hires, or outsourced HR services, we ensure you get the right people at the right time.
-          </p>
-        </motion.div>
-      </div>
-
-      {/* Services Section */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 md:px-12">
-        {services.map((service, index) => (
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="bg-gradient-to-b from-gray-50 to-gray-100"
+    >
+      {/* Hero Section with Blended Background */}
+      <div className="relative overflow-hidden bg-gray-900">
+        {/* Background Image with Gradient Overlay */}
+        <div 
+          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')] 
+          bg-cover bg-center opacity-40"
+          style={{
+            maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%)"
+          }}
+        ></div>
+        
+        {/* Additional Blur Effect */}
+        <div 
+          className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-50"
+          style={{
+            height: "90%",
+            top: "10%",
+            backdropFilter: "blur(3px)",
+            WebkitBackdropFilter: "blur(3px)"
+          }}
+        ></div>
+        
+        {/* Content */}
+        <div className="max-w-7xl mx-auto py-28 px-6 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            key={index}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.6,
-              delay: index * 0.1,
-              type: "spring",
-              stiffness: 100,
-            }}
-            viewport={{ once: true, margin: "-50px" }}
-            className="bg-white p-8 rounded-2xl shadow-lg flex flex-col hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
           >
-            <div className="mb-5 flex justify-center" aria-hidden="true">
-              {service.icon}
-            </div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">{service.title}</h3>
-            <p className="text-gray-600 text-base text-center">{service.description}</p>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">
+              Empowering Businesses with the <span className="text-blue-400">Right Talent</span>
+            </h1>
+            <p className="max-w-3xl mx-auto text-xl text-sky-200">
+              We specialize in providing top-tier human resource solutions to businesses across various industries.
+            </p>
           </motion.div>
-        ))}
+        </div>
       </div>
 
-      {/* Why Choose Us Section with Videos */}
-      <div className="mt-20 px-6 md:px-12">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="text-3xl font-bold text-center mb-12 text-gray-800"
-        >
-          Why <span className="text-blue-600">Choose Us?</span>
-        </motion.h2>
+      <div className="py-16">
+        {/* About Us Section */}
+        <div className="max-w-5xl mx-auto px-6 md:px-12 mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-xl shadow-md text-center"
+          >
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">Who We Are</h3>
+            <p className="text-lg text-gray-600">
+              Whether you need temporary staff, permanent hires, or outsourced HR services, we ensure you get the right people at the right time.
+            </p>
+          </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {whyChooseUs.map((item, index) => (
+        {/* Services Section */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 md:px-12">
+          {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{
-                duration: 0.8,
-                delay: index * 0.15,
+                duration: 0.6,
+                delay: index * 0.1,
                 type: "spring",
-                damping: 10,
+                stiffness: 100,
               }}
               viewport={{ once: true, margin: "-50px" }}
-              className="relative overflow-hidden rounded-xl shadow-lg bg-white group hover:shadow-xl transition-shadow duration-300"
+              className="bg-white p-8 rounded-2xl shadow-lg flex flex-col hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
             >
-              <div className="h-48 bg-white flex items-center justify-center p-4">
-                <video
-                  src={item.video}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto max-h-full object-contain"
-                  onError={(e) => console.log(`Video error: ${e.target.error}`)}
-                />
+              <div className="mb-5 flex justify-center" aria-hidden="true">
+                {service.icon}
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">{service.title}</h3>
+              <p className="text-gray-600 text-base text-center">{service.description}</p>
             </motion.div>
           ))}
         </div>
-      </div>
 
-      {/* Dual CTA Section */}
-      <div className="mt-20 grid md:grid-cols-2 gap-8 px-6 md:px-12">
-        {/* For Job Seekers */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="bg-blue-600 p-8 rounded-xl shadow-lg text-white"
-        >
-          <div className="flex items-center mb-4">
-            <FileText size={40} className="mr-4" />
-            <h3 className="text-2xl font-bold">For Job Seekers</h3>
-          </div>
-          <p className="mb-6">Looking for your next career move? Submit your resume today and explore exciting opportunities with top companies.</p>
-          <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
-            Submit Resume <ArrowRight className="ml-2" />
-          </button>
-        </motion.div>
+        {/* Why Choose Us Section with Videos */}
+        <div className="mt-20 px-6 md:px-12">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-3xl font-bold text-center mb-12 text-gray-800"
+          >
+            Why <span className="text-blue-600">Choose Us?</span>
+          </motion.h2>
 
-        {/* For Employers */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
-        >
-          <div className="flex items-center mb-4">
-            <UserCheck size={40} className="mr-4 text-blue-600" />
-            <h3 className="text-2xl font-bold text-gray-800">For Employers</h3>
-          </div>
-          <p className="mb-6 text-gray-600">Need skilled professionals? We make hiring simple, efficient, and hassle-free.</p>
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center">
-            Discuss Staffing Needs <ArrowRight className="ml-2" />
-          </button>
-        </motion.div>
-      </div>
-
-      {/* Final CTA */}
-      <motion.div
-        className="mt-20 bg-white rounded-xl mx-6 md:mx-12 p-8 md:p-12 text-center shadow-xl"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">📞 Contact Us Today!</h3>
-        <div className="flex flex-wrap justify-center gap-6 mb-8 text-gray-600">
-          <div className="flex items-center">
-            <span className="mr-2">📍</span>
-            <span>[Your Location]</span>
-          </div>
-          <div className="flex items-center">
-            <span className="mr-2">📧</span>
-            <span>[Your Email]</span>
-          </div>
-          <div className="flex items-center">
-            <span className="mr-2">☎</span>
-            <span>[Your Phone]</span>
+          <div className="grid md:grid-cols-3 gap-8">
+            {whyChooseUs.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.15,
+                  type: "spring",
+                  damping: 10,
+                }}
+                viewport={{ once: true, margin: "-50px" }}
+                className="relative overflow-hidden rounded-xl shadow-lg bg-white group hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="h-48 bg-white flex items-center justify-center p-4">
+                  <video
+                    src={item.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-auto max-h-full object-contain"
+                    onError={(e) => console.log(`Video error: ${e.target.error}`)}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
-        <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
-          Get in Touch
-        </button>
-      </motion.div>
-    </div>
+
+        {/* Dual CTA Section */}
+        <div className="mt-20 grid md:grid-cols-2 gap-8 px-6 md:px-12">
+          {/* For Job Seekers */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-blue-600 p-8 rounded-xl shadow-lg text-white"
+          >
+            <div className="flex items-center mb-4">
+              <FileText size={40} className="mr-4" />
+              <h3 className="text-2xl font-bold">For Job Seekers</h3>
+            </div>
+            <p className="mb-6">Looking for your next career move? Submit your resume today and explore exciting opportunities with top companies.</p>
+            <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
+              Submit Resume <ArrowRight className="ml-2" />
+            </button>
+          </motion.div>
+
+          {/* For Employers */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
+          >
+            <div className="flex items-center mb-4">
+              <UserCheck size={40} className="mr-4 text-blue-600" />
+              <h3 className="text-2xl font-bold text-gray-800">For Employers</h3>
+            </div>
+            <p className="mb-6 text-gray-600">Need skilled professionals? We make hiring simple, efficient, and hassle-free.</p>
+            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center">
+              Discuss Staffing Needs <ArrowRight className="ml-2" />
+            </button>
+          </motion.div>
+        </div>
+
+        {/* Final CTA */}
+        <motion.div
+          className="mt-20 bg-white rounded-xl mx-6 md:mx-12 p-8 md:p-12 text-center shadow-xl"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">📞 Contact Us Today!</h3>
+          <div className="flex flex-wrap justify-center gap-6 mb-8 text-gray-600">
+            <div className="flex items-center">
+              <span className="mr-2">📍</span>
+              <span>[Your Location]</span>
+            </div>
+            <div className="flex items-center">
+              <span className="mr-2">📧</span>
+              <span>[Your Email]</span>
+            </div>
+            <div className="flex items-center">
+              <span className="mr-2">☎</span>
+              <span>[Your Phone]</span>
+            </div>
+          </div>
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
+            Get in Touch
+          </button>
+        </motion.div>
+      </div>
+    </motion.div>
   );
 };
 
