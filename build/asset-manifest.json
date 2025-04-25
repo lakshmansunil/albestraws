@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fba932e4.css",
-    "main.js": "/static/js/main.e97629d2.js",
+    "main.css": "/static/css/main.2f6b945b.css",
+    "main.js": "/static/js/main.e46ede95.js",
     "static/media/competitive-pricing.mp4": "/static/media/competitive-pricing.e2ded70d868771220089.mp4",
     "static/media/tailored-solutions.mp4": "/static/media/tailored-solutions.862b5a53d4828f76a39a.mp4",
     "static/media/compliance.mp4": "/static/media/compliance.0bfee96d3b80f50d3444.mp4",
@@ -22,13 +22,18 @@
     "static/media/delivery.mp4": "/static/media/delivery.c7f949cf300c5c6b0d0f.mp4",
     "static/media/expert.mp4": "/static/media/expert.3bf0ac726eb03f4bdb6a.mp4",
     "static/media/agile.mp4": "/static/media/agile.45b96b63147fbb613225.mp4",
+    "static/media/it-training.avif": "/static/media/it-training.f21591cb2eac6e883fd6.avif",
+    "static/media/software-development.avif": "/static/media/software-development.022375a14b3252207854.avif",
+    "static/media/contract-payroll.webp": "/static/media/contract-payroll.119831cccd688e64c84a.webp",
+    "static/media/hr-services.avif": "/static/media/hr-services.f6fb8616cfe08b61539e.avif",
+    "static/media/hardware-supplies.avif": "/static/media/hardware-supplies.e5768126726c8ece9568.avif",
     "static/media/logo.png": "/static/media/logo.30c5712ba60bcc185ad2.png",
     "index.html": "/index.html",
-    "main.fba932e4.css.map": "/static/css/main.fba932e4.css.map",
-    "main.e97629d2.js.map": "/static/js/main.e97629d2.js.map"
+    "main.2f6b945b.css.map": "/static/css/main.2f6b945b.css.map",
+    "main.e46ede95.js.map": "/static/js/main.e46ede95.js.map"
   },
   "entrypoints": [
-    "static/css/main.fba932e4.css",
-    "static/js/main.e97629d2.js"
+    "static/css/main.2f6b945b.css",
+    "static/js/main.e46ede95.js"
   ]
 }
