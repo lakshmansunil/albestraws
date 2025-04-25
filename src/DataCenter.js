@@ -91,7 +91,7 @@ const DataCenter = () => {
     >
       {/* Hero Section with Animated Background */}
       <div className="relative overflow-hidden bg-gray-900">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2232&auto=format&fit=crop')] bg-cover bg-center opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('https://media.istockphoto.com/id/1356581284/photo/shot-of-data-center-with-multiple-rows-of-fully-operational-server-racks-modern.webp?a=1&b=1&s=612x612&w=0&k=20&c=Q2AIY9oBOqWU6fb7O70fPdyL9n0MsxHSMMUSeWoTb7M=')] bg-cover bg-center opacity-30"></div>
         <div className="max-w-7xl mx-auto py-28 px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ y: -20, opacity: 0 }}
