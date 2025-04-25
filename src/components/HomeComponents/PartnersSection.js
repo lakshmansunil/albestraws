@@ -10,7 +10,7 @@ const partners = [
   { name: "Main Tech", logo: "https://maintech.com/wp-content/uploads/2024/08/Maintech-Remade-logo.webp" },
   { name: "Collabera", logo: "https://logos-download.com/wp-content/uploads/2020/06/Collabera_Logo.png" },
   { name: "HCL", logo: "https://1000logos.net/wp-content/uploads/2023/03/HCL-logo.png" },
-  { name: "PMO Desk", logo: "http://pmodesk.com/assest/images/logo.png" },
+  // { name: "PMO Desk", logo: "http://pmodesk.com/assest/images/logo.png" },
   { name: "Phase Zero", logo: "https://cdn.prod.website-files.com/64b71a2082e0c534d8ada255/64b80f0e1bdd403bc5baf5a0_PZ_VECTOR.svg" }
 ];
 
