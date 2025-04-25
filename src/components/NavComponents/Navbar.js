@@ -218,7 +218,7 @@ const Navbar = () => {
 
             <li className="nav-item">
               <Link
-                to="/products"
+                to="/blog"
                 className="block py-2 px-4 hover:text-sky-600 rounded transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
