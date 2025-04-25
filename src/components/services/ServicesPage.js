@@ -3,36 +3,42 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Users, Hammer, FileText, Code, BookOpen } from "lucide-react";
+
+// Import local images
+import hrServices from "../../assets/images/services/hr-services.avif";
+import hardwareSupplies from "../../assets/images/services/hardware-supplies.avif";
+import contractPayroll from "../../assets/images/services/contract-payroll.webp";
+import softwareDevelopment from "../../assets/images/services/software-development.avif";
+import itTraining from "../../assets/images/services/it-training.avif";
 
 const services = [
   {
     title: "HR Services",
-    icon: <Users size={50} className="text-blue-600" />,
+    image: hrServices,
     description: "Expert solutions for staffing, executive hiring, and HR compliance.",
     link: "/services/service5", 
   },
   {
     title: "Hardware Supplies",
-    icon: <Hammer size={50} className="text-yellow-600" />,
+    image: hardwareSupplies,
     description: "Quality tools, fasteners, and safety gear for your projects.",
     link: "/services/service4", 
   },
   {
     title: "Contract Payroll",
-    icon: <FileText size={50} className="text-green-600" />,
+    image: contractPayroll,
     description: "Streamlined payroll management for contractors and temporary staff.",
     link: "/services/service3",
   },
   {
     title: "Software Development",
-    icon: <Code size={50} className="text-indigo-600" />,
+    image: softwareDevelopment,
     description: "Custom software solutions to optimize your business operations.",
     link: "/services/service2", 
   },
   {
     title: "Corporate IT Training Solutions",
-    icon: <BookOpen size={50} className="text-purple-600" />,
+    image: itTraining,
     description: "Tailored IT training to upskill your team for the digital era.",
     link: "/services/service1", 
   },
@@ -64,7 +70,11 @@ const ServicesPage = () => {
             viewport={{ once: true }}
             className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center hover:shadow-2xl transition duration-300"
           >
-            <div className="mb-4">{service.icon}</div>
+            <img
+              src={service.image}
+              alt={service.title}
+              className="w-[400px] h-[250px] object-cover mb-4"
+            />
             <h3 className="text-2xl font-bold text-gray-800 mb-2">{service.title}</h3>
             <p className="text-gray-600 mb-4">{service.description}</p>
             <Link
