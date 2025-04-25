@@ -127,11 +127,11 @@ const processSteps = [
 const testimonials = [
   {
     quote: "The team helped us streamline our operations with a custom ERP solution. The project was completed on time, and we've seen a significant improvement in efficiency!",
-    author: "John D., CEO of TechCorp"
+    author: "Jaswanth D., CEO of TechCorp"
   },
   {
     quote: "Our mobile app was developed with great attention to detail, and our users love the intuitive interface. We're already seeing a surge in downloads!",
-    author: "Emily R., Marketing Director of FoodiesApp"
+    author: "Lilly R., Marketing Director of FoodiesApp"
   }
 ];
 
@@ -146,273 +146,306 @@ const Service4 = () => {
   }, []);
 
   return (
-    <div className="py-16 bg-gray-50">
-      <style>
-        {`
-          .blue-bullets li::marker {
-            color: #2563eb; /* Matches Tailwind's blue-600 */
-          }
-        `}
-      </style>
-
-      {/* Main Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center mb-16 px-6"
-      >
-        <h2 className="text-4xl font-extrabold text-gray-800 tracking-tight mb-4">
-          Custom <span className="text-blue-600">Software Development</span> Services
-        </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform Your Ideas into Powerful Software Solutions
-        </p>
-      </motion.div>
-
-      {/* Introduction Section */}
-      <div className="max-w-5xl mx-auto px-6 md:px-12 mb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="bg-white p-8 rounded-xl shadow-md"
-        >
-          <p className="text-lg text-gray-600 mb-6">
-            At [Your Company Name], we specialize in creating custom software applications tailored to your business needs. Our end-to-end development process ensures that you get innovative, scalable, and efficient solutions that drive growth and improve operations. Whether you need a web application, mobile app, or enterprise solution, we are here to help you build it.
-          </p>
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">Our Expertise</h3>
-          <p className="text-lg text-gray-600">
-            We offer a wide range of software development services designed to bring your vision to life:
-          </p>
-        </motion.div>
-      </div>
-
-      {/* Services Section */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-12">
-        {services.map((service, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.6,
-              delay: index * 0.1,
-              type: "spring",
-              stiffness: 100,
-            }}
-            viewport={{ once: true, margin: "-50px" }}
-            className="bg-white p-8 rounded-2xl shadow-lg flex flex-col hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-          >
-            <div className="mb-5 flex justify-center" aria-hidden="true">
-              {service.icon}
-            </div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">{service.title}</h3>
-            <p className="text-gray-600 text-base">{service.description}</p>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Why Choose Us Section */}
-      <div className="mt-20 px-6 md:px-12">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="text-3xl font-bold text-center mb-12 text-gray-800"
-        >
-          Why <span className="text-blue-600">Choose Us?</span>
-        </motion.h2>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {whyChooseUs.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: index * 0.15,
-                type: "spring",
-                damping: 10,
-              }}
-              viewport={{ once: true, margin: "-50px" }}
-              className="relative overflow-hidden rounded-xl shadow-lg bg-white group hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="h-48 bg-white flex items-center justify-center p-4">
-                <video
-                  src={item.video}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto max-h-full object-contain"
-                  onError={() => console.log(`Failed to load video: ${item.video}`)}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Our Process Section */}
-      <div className="mt-20 px-6 md:px-12">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="text-3xl font-bold text-center mb-12 text-gray-800"
-        >
-          Our <span className="text-blue-600">Process</span>
-        </motion.h2>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
-          {processSteps.map((step, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: index * 0.15,
-                type: "spring",
-                damping: 10,
-              }}
-              viewport={{ once: true, margin: "-50px" }}
-              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
-                  <span className="text-blue-600 font-bold text-xl">{index + 1}</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800">{step.title}</h3>
-              </div>
-              <p className="text-gray-600">{step.description}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Industries Section */}
-      <div className="mt-20 px-6 md:px-12">
-        <motion.h2
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-3xl font-bold text-center mb-12 text-gray-800"
-        >
-          Industries We <span className="text-blue-600">Serve</span>
-        </motion.h2>
-
-        <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.3,
-              },
-            },
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="bg-gray-50"
+    >
+      {/* Hero Section with Blended Background */}
+      <div className="relative overflow-hidden bg-gray-900">
+        {/* Background Image with Gradient Overlay */}
+        <div 
+          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] 
+          bg-cover bg-center opacity-40"
+          style={{
+            maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%)"
           }}
-        >
-          {industries.map((industry, index) => (
-            <motion.div
-              key={index}
-              variants={{
-                hidden: { opacity: 0, scale: 0.8 },
-                visible: {
-                  opacity: 1,
-                  scale: 1,
-                  transition: {
-                    type: "spring",
-                    stiffness: 100,
-                  },
-                },
-              }}
-              whileHover={{ scale: 1.1 }}
-              className="flex flex-col items-center"
-            >
-              <div className="w-20 h-20 rounded-full bg-white shadow-md flex items-center justify-center mb-3 hover:shadow-lg transition-all">
-                {industry.icon}
-              </div>
-              <p className="text-center font-medium text-gray-700">{industry.title}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+        ></div>
+        
+        {/* Additional Blur Effect */}
+        <div 
+          className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-50"
+          style={{
+            height: "90%",
+            top: "10%",
+            backdropFilter: "blur(3px)",
+            WebkitBackdropFilter: "blur(3px)"
+          }}
+        ></div>
+        
+        {/* Content */}
+        <div className="max-w-7xl mx-auto py-28 px-6 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">
+              Custom <span className="text-blue-400">Software Development</span> Solutions
+            </h1>
+            <p className="max-w-3xl mx-auto text-xl text-sky-200">
+              Transform your ideas into powerful software solutions. We specialize in building innovative, scalable, and efficient applications tailored to your business needs.
+            </p>
+          </motion.div>
+        </div>
       </div>
 
-      {/* Testimonials Section */}
-      <div className="mt-20 px-6 md:px-12">
-        <motion.h2
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+      <div className="py-16">
+        <style>
+          {`
+            .blue-bullets li::marker {
+              color: #2563eb; /* Matches Tailwind's blue-600 */
+            }
+          `}
+        </style>
+
+        {/* Introduction Section */}
+        <div className="max-w-5xl mx-auto px-6 md:px-12 mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-xl shadow-md"
+          >
+            <p className="text-lg text-gray-600 mb-6">
+              At Albestraws, we specialize in creating custom software applications tailored to your business needs. Our end-to-end development process ensures that you get innovative, scalable, and efficient solutions that drive growth and improve operations. Whether you need a web application, mobile app, or enterprise solution, we are here to help you build it.
+            </p>
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">Our Expertise</h3>
+            <p className="text-lg text-gray-600">
+              We offer a wide range of software development services designed to bring your vision to life:
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Services Section */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-12">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                type: "spring",
+                stiffness: 100,
+              }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="bg-white p-8 rounded-2xl shadow-lg flex flex-col hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            >
+              <div className="mb-5 flex justify-center" aria-hidden="true">
+                {service.icon}
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">{service.title}</h3>
+              <p className="text-gray-600 text-base">{service.description}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Why Choose Us Section */}
+        <div className="mt-20 px-6 md:px-12">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-3xl font-bold text-center mb-12 text-gray-800"
+          >
+            Why <span className="text-blue-600">Choose Us?</span>
+          </motion.h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {whyChooseUs.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.15,
+                  type: "spring",
+                  damping: 10,
+                }}
+                viewport={{ once: true, margin: "-50px" }}
+                className="relative overflow-hidden rounded-xl shadow-lg bg-white group hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="h-48 bg-white flex items-center justify-center p-4">
+                  <video
+                    src={item.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-auto max-h-full object-contain"
+                    onError={() => console.log(`Failed to load video: ${item.video}`)}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Our Process Section */}
+        <div className="mt-20 px-6 md:px-12">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-3xl font-bold text-center mb-12 text-gray-800"
+          >
+            Our <span className="text-blue-600">Process</span>
+          </motion.h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+            {processSteps.map((step, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.15,
+                  type: "spring",
+                  damping: 10,
+                }}
+                viewport={{ once: true, margin: "-50px" }}
+                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                    <span className="text-blue-600 font-bold text-xl">{index + 1}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800">{step.title}</h3>
+                </div>
+                <p className="text-gray-600">{step.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Industries Section */}
+        <div className="mt-20 px-6 md:px-12">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold text-center mb-12 text-gray-800"
+          >
+            Industries We <span className="text-blue-600">Serve</span>
+          </motion.h2>
+
+          <motion.div
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.1,
+                  delayChildren: 0.3,
+                },
+              },
+            }}
+          >
+            {industries.map((industry, index) => (
+              <motion.div
+                key={index}
+                variants={{
+                  hidden: { opacity: 0, scale: 0.8 },
+                  visible: {
+                    opacity: 1,
+                    scale: 1,
+                    transition: {
+                      type: "spring",
+                      stiffness: 100,
+                    },
+                  },
+                }}
+                whileHover={{ scale: 1.1 }}
+                className="flex flex-col items-center"
+              >
+                <div className="w-20 h-20 rounded-full bg-white shadow-md flex items-center justify-center mb-3 hover:shadow-lg transition-all">
+                  {industry.icon}
+                </div>
+                <p className="text-center font-medium text-gray-700">{industry.title}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Testimonials Section */}
+        <div className="mt-20 px-6 md:px-12">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold text-center mb-12 text-gray-800"
+          >
+            What Our <span className="text-blue-600">Clients Say</span>
+          </motion.h2>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-xl shadow-md"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                    <Users className="text-blue-600" />
+                  </div>
+                  <div className="ml-4">
+                    <p className="font-semibold text-gray-800">{testimonial.author.split(",")[0]}</p>
+                    <p className="text-gray-500 text-sm">{testimonial.author.split(",")[1]}</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 italic">"{testimonial.quote}"</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Final CTA Section */}
+        <motion.div
+          className="mt-20 bg-white rounded-xl mx-6 md:mx-12 p-8 md:p-12 text-center shadow-xl"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold text-center mb-12 text-gray-800"
         >
-          What Our <span className="text-blue-600">Clients Say</span>
-        </motion.h2>
-
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white p-6 rounded-xl shadow-md"
-            >
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
-                  <Users className="text-blue-600" />
-                </div>
-                <div className="ml-4">
-                  <p className="font-semibold text-gray-800">{testimonial.author.split(",")[0]}</p>
-                  <p className="text-gray-500 text-sm">{testimonial.author.split(",")[1]}</p>
-                </div>
-              </div>
-              <p className="text-gray-600 italic">"{testimonial.quote}"</p>
-            </motion.div>
-          ))}
-        </div>
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Get In Touch</h3>
+          <p className="text-gray-600 mb-6 text-lg max-w-2xl mx-auto">
+            Ready to bring your software vision to life? Contact us for a free consultation and get started on your custom software solution today!
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
+              Contact Us
+            </button>
+            <button className="bg-white text-blue-600 border border-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg">
+              Request a Quote
+            </button>
+          </div>
+        </motion.div>
       </div>
-
-      {/* Final CTA Section */}
-      <motion.div
-        className="mt-20 bg-white rounded-xl mx-6 md:mx-12 p-8 md:p-12 text-center shadow-xl"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Get In Touch</h3>
-        <p className="text-gray-600 mb-6 text-lg max-w-2xl mx-auto">
-          Ready to bring your software vision to life? Contact us for a free consultation and get started on your custom software solution today!
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
-            Contact Us
-          </button>
-          <button className="bg-white text-blue-600 border border-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg">
-            Request a Quote
-          </button>
-        </div>
-      </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
